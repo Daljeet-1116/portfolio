@@ -7,8 +7,8 @@ export default function Hero() {
   return (
     <>
     {/* bg-gradient-to-b from-red-100 to-emerald-100 */}
-      <div className=" max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 h-screen  ">
-<div className="min-h-screen pt-25 sm:px-10 lg:px-20 p-4">
+      <div className=" max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 h-screen pt-30 ">
+<div className="min-h-screen sm:px-10 lg:px-20 p-8">
   <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
     Hi,I'm <br /><span className="text-red-600">Daljeet Singh</span>
   </h1>
@@ -20,7 +20,7 @@ export default function Hero() {
     and <span className="text-red-400">Tailwind CSS</span>.
   </p>
 
-<div className="mt-6 flex flex-col sm:flex-row gap-4 sm:gap-8">
+<div className="mt-6 flex flex-col px-4 sm:flex-row gap-4 sm:gap-8">
   <a
     href="#projects"
     className="w-full sm:w-auto px-8 py-3 bg-red-600 font-semibold text-white font-sans rounded-2xl shadow hover:bg-gray-900 transition text-center"
@@ -42,7 +42,7 @@ export default function Hero() {
 
 
 
-        <div className=" flex items-center justify-center pt-25">
+        <div className="">
           <GlowingBlobImage />
         </div>
       </div>
