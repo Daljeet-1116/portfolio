@@ -8,9 +8,9 @@ export default function Hero() {
     <>
     {/* bg-gradient-to-b from-red-100 to-emerald-100 */}
       <div className=" max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 h-screen  ">
-<div className="min-h-screen flex flex-col justify-center sm:px-10 lg:px-20 pb-10 p-4">
+<div className="min-h-screen pt-25 sm:px-10 lg:px-20 p-4">
   <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-    Hi, I'm <span className="text-red-600">Daljeet Singh</span>
+    Hi,I'm <br /><span className="text-red-600">Daljeet Singh</span>
   </h1>
 
   <p className="mt-4 py-6 text-base sm:text-lg md:text-xl max-w-2xl text-gray-700">
@@ -42,7 +42,7 @@ export default function Hero() {
 
 
 
-        <div className=" flex items-center justify-center">
+        <div className=" flex items-center justify-center pt-25">
           <GlowingBlobImage />
         </div>
       </div>
