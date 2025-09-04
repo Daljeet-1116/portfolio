@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 export default function Projects() {
   const projects = [
     {
@@ -24,9 +26,19 @@ export default function Projects() {
         "A reusable and customizable template built with responsive design principles for multiple use cases.",
       image: "/images/bali.png",
       link: "http://bali-resort.vercel.app",
-      tech: ["React + vite", "Tailwind", ],
+      tech: ["React + vite", "Tailwind"],
     },
   ];
+
+  // Framer Motion variants for sliding in from right
+  const cardVariants = {
+    offscreen: { x: 100, opacity: 0 },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      transition: { type: "spring", bounce: 0.2, duration: 0.8 },
+    },
+  };
 
   return (
     <section id="projects" className="py-20 px-6 sm:px-10 lg:px-16 bg-gray-50">
@@ -37,19 +49,22 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden p-2  flex flex-col"
+              className="bg-white rounded-2xl shadow-md overflow-hidden p-2 flex flex-col"
+              initial="offscreen"
+              whileInView="onscreen"
+               viewport={{ once: false, amount: 0.3 }} 
+              variants={cardVariants}
+              whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
             >
-           
               <img
                 src={project.image}
                 alt={project.title}
                 className="w-full h-48 object-cover rounded-t-sm"
               />
 
-           
-              <div className="p-6 flex flex-col flex-grow  border-t-1">
+              <div className="p-6 flex flex-col flex-grow border-t-1">
                 <h3 className="text-xl font-semibold text-gray-900">
                   {project.title}
                 </h3>
@@ -57,7 +72,6 @@ export default function Projects() {
                   {project.description}
                 </p>
 
-             
                 <div className="mt-4 flex flex-wrap gap-2">
                   {project.tech.map((tech, i) => (
                     <span
@@ -69,7 +83,6 @@ export default function Projects() {
                   ))}
                 </div>
 
-               
                 <a
                   href={project.link}
                   target="_blank"
@@ -78,7 +91,7 @@ export default function Projects() {
                   View Project
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
