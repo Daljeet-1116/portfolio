@@ -4,18 +4,19 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start md:items-center px-4 sm:px-8 lg:px-12 py-16 md:min-h-[90vh] overflow-hidden">
+    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start md:items-center px-4 sm:px-8 lg:px-12 py-18 md:min-h-[90vh] overflow-hidden">
       {/* Left Content */}
+      
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="flex justify-center md:justify-start"
+        className="flex justify-center md:justify-center"
       >
         <img
           src="/images/profile.jpg"
           alt="Daljeet Singh"
-          className="rounded-2xl shadow-lg w-full max-w-xs sm:max-w-sm object-cover"
+          className="rounded-2xl shadow-lg w-68 h-82  max-w-xs sm:max-w-sm object-cover"
         />
       </motion.div>
 
