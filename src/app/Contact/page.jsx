@@ -8,6 +8,7 @@ export default function Contact() {
 
   const sendEmail = async (e) => {
     e.preventDefault();
+    console.log("🚀 sendEmail fired"); // Debug
     setStatus("Sending...");
 
     const formData = {
@@ -31,19 +32,21 @@ export default function Contact() {
         setStatus(`❌ Failed to send message: ${data.message}`);
       }
     } catch (err) {
-      console.error(err);
+      console.error("❌ Fetch error:", err);
       setStatus("❌ Error sending message.");
     }
   };
 
   return (
-    <section id="contact" className="py-10 px-6 sm:px-10 lg:px-16 bg-gray-100 overflow-hidden">
+    <section
+      id="contact"
+      className="py-10 px-6 sm:px-10 lg:px-16 bg-gray-100 overflow-hidden"
+    >
       <div className="max-w-3xl mx-auto">
-       
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }} 
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-bold text-center text-red-600 pb-12"
         >
@@ -59,7 +62,10 @@ export default function Contact() {
           className="bg-white shadow-lg rounded-2xl p-8 space-y-6"
         >
           <div>
-            <label htmlFor="name" className="block text-sm font-semibold text-gray-700">
+            <label
+              htmlFor="name"
+              className="block text-sm font-semibold text-gray-700"
+            >
               Name
             </label>
             <input
@@ -73,7 +79,10 @@ export default function Contact() {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-semibold text-gray-700">
+            <label
+              htmlFor="email"
+              className="block text-sm font-semibold text-gray-700"
+            >
               Email
             </label>
             <input
@@ -87,7 +96,10 @@ export default function Contact() {
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-semibold text-gray-700">
+            <label
+              htmlFor="message"
+              className="block text-sm font-semibold text-gray-700"
+            >
               Message
             </label>
             <textarea

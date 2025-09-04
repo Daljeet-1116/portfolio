@@ -2,11 +2,14 @@ import nodemailer from "nodemailer";
 
 export async function POST(req) {
   try {
+    // console.log("🚀 API route hit"); // Debug
     const { name, email, message } = await req.json();
+    // console.log("📨 Incoming:", { name, email, message });
 
     const transporter = nodemailer.createTransport({
       host: process.env.EMAIL_HOST,
       port: process.env.EMAIL_PORT,
+      secure: false, // true if port = 465, false if 587
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
