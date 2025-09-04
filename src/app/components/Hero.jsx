@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center min-h-[90vh] px-4 sm:px-8 lg:px-12 pt-20 gap-34">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center min-h-[90vh] px-4 sm:px-8 lg:px-12 pt-24">
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -23,11 +23,9 @@ export default function Hero() {
 
             {/* Description */}
             <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg lg:text-xl max-w-xl mx-auto md:mx-0 text-gray-700 leading-relaxed">
-              A passionate{" "}
-              <span className="font-semibold">Frontend Developer</span> who
+              A passionate <span className="font-semibold">Frontend Developer</span> who
               loves building modern, responsive, and user-friendly websites
-              using
-              <span className="text-red-400"> React.js</span>,{" "}
+              using <span className="text-red-400">React.js</span>,{" "}
               <span className="text-red-400">Next.js</span>, and{" "}
               <span className="text-red-400">Tailwind CSS</span>.
             </p>
@@ -51,7 +49,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Right Content */}
-        <div className="mt-10 md:mt-0 flex justify-start">
+        <div className="mt-10 md:mt-0 flex justify-center">
           <GlowingBlobImage />
         </div>
       </div>
