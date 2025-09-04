@@ -51,7 +51,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Right Content */}
-        <div className="mt-10 md:mt-0 flex justify-center md:justify-end">
+        <div className="mt-10 md:mt-0 flex justify-start ps-40">
           <GlowingBlobImage />
         </div>
       </div>
