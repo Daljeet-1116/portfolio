@@ -55,9 +55,7 @@ export default function Hero() {
       </div>
 
       {/* Divider */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12">
-        <hr className="mt-10 border-gray-300" />
-      </div>
+
     </>
   );
 }

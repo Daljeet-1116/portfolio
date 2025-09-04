@@ -18,7 +18,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="bg-gray-50 py-20 px-6 md:px-12 lg:px-24">
+    <section id="skills" className="max-w-5xl mx-auto bg-gray-50 py-20 px-6 md:px-12 lg:px-24">
       <div className="max-w-5xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
