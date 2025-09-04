@@ -20,26 +20,26 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Right - Social Links */}
+       
         <div className="flex gap-6 text-2xl">
           <a
-            href="https://github.com/yourusername"
-            target="_blank"
+            href="https://github.com/Daljeet-1116"
+            target="https://github.com/Daljeet-1116"
             rel="noopener noreferrer"
             className="hover:text-red-500 transition"
           >
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
-            target="_blank"
+            href="https://www.linkedin.com/in/daljeet-singh-2654b0249"
+            target="https://www.linkedin.com/in/daljeet-singh-2654b0249"
             rel="noopener noreferrer"
             className="hover:text-red-500 transition"
           >
             <FaLinkedin />
           </a>
            <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/daljeet-singh-2654b0249"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-red-500 transition"

@@ -4,6 +4,7 @@ import  Hero from "./components/Hero"
 import  Aboutme from "./Aboutme/page"
 import  Skills from "./Skills/page"
 import  Project from "./Project/page"
+import  Contact from "./Contact/page"
 
 export default function page() {
   return (
@@ -12,6 +13,7 @@ export default function page() {
 <Aboutme/>
 <Skills/>
 <Project/>
+<Contact/>
 
 </div>
   );

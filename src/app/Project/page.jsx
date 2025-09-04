@@ -15,7 +15,7 @@ export default function Projects() {
       description:
         "A fully functional e-commerce platform with product listings, shopping cart, and secure checkout process.",
       image: "/images/e-comm.png",
-      link: "",
+      link: "https://github.com/Daljeet-1116/E-commerce",
       tech: ["React.js", "Redux", "REST API"],
     },
     {
@@ -31,7 +31,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20 px-6 sm:px-10 lg:px-16 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 className="text-3xl md:text-4xl text-red-600 font-bold text-center mb-12">
           My Projects
         </h2>
 
