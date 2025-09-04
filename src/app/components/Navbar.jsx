@@ -10,7 +10,7 @@ export default function Navbar() {
     <>
       <nav className="w-full fixed top-0 left-0 bg-white shadow-md z-50 transition-all duration-300">
         <div className="max-w-6xl mx-auto px-6 flex justify-between items-center h-16">
-          {/* Logo */}
+         
           <div className="flex items-center space-x-2 relative">
             <span className="text-red-600 font-sans font-bold text-2xl relative">
               Daljeet Singh
@@ -18,11 +18,11 @@ export default function Navbar() {
             </span>
           </div>
 
-          {/* Center Navigation / Search */}
+        
           <div className="hidden md:flex flex-1 justify-center items-center">
             <div className="flex space-x-10 font-sans">
               <a
-                href="#"
+                href="/"
                 className="relative group text-gray-800 py-3 font-medium transition duration-300 hover:text-red-500"
               >
                 Home
@@ -30,21 +30,21 @@ export default function Navbar() {
               </a>
 
               <a
-                href="#"
+                href="Aboutme"
                 className="relative group text-gray-800 py-3 font-medium transition duration-300 hover:text-red-500"
               >
                 About Me
                 <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-red-500 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
               </a>
               <a
-                href="#"
+                href="Skills"
                 className="relative group text-gray-800 py-3 font-medium transition duration-300 hover:text-red-500"
               >
                 Skills
                 <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-red-500 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
               </a>
               <a
-                href="#"
+                href="Project"
                 className="relative group text-gray-800 py-3 font-medium transition duration-300 hover:text-red-500"
               >
                 Projects
@@ -53,14 +53,14 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Right Side */}
+         
           <div className="hidden font-sans md:block">
-            <a href="#" className="font-medium border-4 text-white hover:text-red-500 bg-red-700 p-2 rounded-3xl hover:bg-white hover:border-2 hover:border-red-500">
+            <a href="/Contact" className="font-medium border-4 text-white hover:text-red-500 bg-red-700 p-2 rounded-3xl hover:bg-white hover:border-2 hover:border-red-500">
               Contact me
             </a>
           </div>
 
-          {/* Mobile Hamburger */}
+         
           <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)} className="text-2xl">
               {isOpen ? <HiX /> : <HiMenu />}
@@ -68,23 +68,23 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Dropdown */}
+    
         {isOpen && (
-          <div className="px-6  pb-3 md:hidden space-y-3 bg-white shadow-md">
-            <a href="#" className="block text-gray-800 hover:text-red-500 ">
+          <div className="ps-12 ms-10  pb-3 md:hidden space-y-3 bg-black/70 rounded-md backdrop-blur-md shadow-md">
+            <a href="#" className="block text-white hover:text-red-500 ">
               Home
             </a>
-            <a href="#" className="block text-gray-800 hover:text-red-500">
+            <a href="#" className="block text-white hover:text-red-500">
               About Me
             </a>
-            <a href="#" className="block text-gray-800 hover:text-red-500">
+            <a href="#" className="block text-white hover:text-red-500">
               Skills
             </a>
-            <a href="#" className="block text-gray-800 hover:text-red-500">
+            <a href="#" className="block text-white hover:text-red-500">
               Projects
             </a>
-            <a href="#" className="block text-gray-800 hover:text-red-500">
-              Sign in
+            <a href="#" className="block text-white hover:text-red-500">
+              Contact Me
             </a>
           </div>
         )}

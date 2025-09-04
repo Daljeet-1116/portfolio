@@ -37,15 +37,15 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 sm:px-10 lg:px-16 bg-gray-100 overflow-hidden">
+    <section id="contact" className="py-10 px-6 sm:px-10 lg:px-16 bg-gray-100 overflow-hidden">
       <div className="max-w-3xl mx-auto">
-        {/* Animated Heading */}
+       
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }} // animate every time
+          viewport={{ once: false, amount: 0.3 }} 
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-center text-red-600 mb-12"
+          className="text-3xl md:text-4xl font-bold text-center text-red-600 pb-12"
         >
           Contact Me
         </motion.h2>

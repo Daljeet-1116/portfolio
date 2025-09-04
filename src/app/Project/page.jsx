@@ -30,7 +30,7 @@ export default function Projects() {
     },
   ];
 
-  // Framer Motion variants for sliding in from right
+ 
   const cardVariants = {
     offscreen: { x: 100, opacity: 0 },
     onscreen: {

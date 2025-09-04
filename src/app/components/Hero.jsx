@@ -2,8 +2,20 @@
 import React from "react";
 import GlowingBlobImage from "./GlowingBlobImage";
 import { motion } from "framer-motion";
+import { FaDownload } from "react-icons/fa";
 
 export default function Hero() {
+    const handleDownload = (e) => {
+    e.preventDefault();
+    const confirmDownload = window.confirm("Do you want to download my CV?");
+    if (confirmDownload) {
+     
+      const link = document.createElement("a");
+      link.href = "/cv.pdf";
+      link.download = "Daljeet_Singh_CV.pdf";
+      link.click();
+    }
+  };
   return (
     <>
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center min-h-[90vh] px-4 sm:px-8 lg:px-12 pt-24">
@@ -38,11 +50,11 @@ export default function Hero() {
               >
                 View Projects
               </a>
-              <a
+              <a  onClick={handleDownload}
                 href="#contact"
                 className="px-6 sm:px-10 py-3 border-2 border-gray-800 font-semibold rounded-2xl shadow hover:bg-gray-900 hover:text-white transition text-center"
               >
-                Download CV
+                  Download CV
               </a>
             </div>
           </div>
