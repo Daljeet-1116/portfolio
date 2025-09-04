@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center min-h-[90vh] px-4 sm:px-8 lg:px-12 pt-20">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center min-h-[90vh] px-4 sm:px-8 lg:px-12 pt-20">
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
