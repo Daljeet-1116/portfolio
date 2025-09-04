@@ -18,13 +18,15 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="max-w-5xl mx-auto bg-gray-50 py-20 px-6 md:px-12 lg:px-24">
+    <>
+    <div className="bg-gradient-to-b from-red-50 to-green-50">
+    <section id="skills" className="max-w-5xl mx-auto py-20 px-6 md:px-12 lg:px-24">
       <div className="max-w-6xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-red-600 mb-12"
+          className="text-3xl md:text-4xl font-bold text-red-600 mb-12 pb-8"
         >
           My Skills
         </motion.h2>
@@ -46,5 +48,7 @@ export default function Skills() {
         </div>
       </div>
     </section>
+    </div>
+    </>
   );
 }
