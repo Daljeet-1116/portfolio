@@ -37,7 +37,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 sm:px-10 lg:px-16 bg-gray-100">
+    <section id="contact" className="py-20 px-6 sm:px-10 lg:px-16 bg-gray-100 overflow-hidden">
       <div className="max-w-3xl mx-auto">
         {/* Animated Heading */}
         <motion.h2
