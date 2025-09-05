@@ -71,7 +71,7 @@ export default function Navbar() {
     
         {isOpen && (
           <div className="ps-12 ms-10  pb-3 md:hidden space-y-3 bg-black/70 rounded-md backdrop-blur-md shadow-md">
-            <a href="Home" className="block text-white hover:text-red-500 ">
+            <a href="/" className="block text-white hover:text-red-500 ">
               Home
             </a>
             <a href="Aboutme" className="block text-white hover:text-red-500">
