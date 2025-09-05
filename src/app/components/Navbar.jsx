@@ -71,19 +71,19 @@ export default function Navbar() {
     
         {isOpen && (
           <div className="ps-12 ms-10  pb-3 md:hidden space-y-3 bg-black/70 rounded-md backdrop-blur-md shadow-md">
-            <a href="#" className="block text-white hover:text-red-500 ">
+            <a href="Home" className="block text-white hover:text-red-500 ">
               Home
             </a>
-            <a href="#" className="block text-white hover:text-red-500">
+            <a href="Aboutme" className="block text-white hover:text-red-500">
               About Me
             </a>
-            <a href="#" className="block text-white hover:text-red-500">
+            <a href="Skills" className="block text-white hover:text-red-500">
               Skills
             </a>
-            <a href="#" className="block text-white hover:text-red-500">
+            <a href="Project" className="block text-white hover:text-red-500">
               Projects
             </a>
-            <a href="#" className="block text-white hover:text-red-500">
+            <a href="Contact" className="block text-white hover:text-red-500">
               Contact Me
             </a>
           </div>
