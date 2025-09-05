@@ -1,40 +1,34 @@
 "use client";
-
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser"; // ✅ use this package
 
 export default function Contact() {
+  const formRef = useRef();
   const [status, setStatus] = useState("");
 
-  const sendEmail = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("🚀 sendEmail fired"); // Debug
     setStatus("Sending...");
 
-    const formData = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      message: e.target.message.value,
-    };
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
 
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await res.json();
-      if (res.ok) {
-        setStatus("✅ Message sent successfully!");
-        e.target.reset();
-      } else {
-        setStatus(`❌ Failed to send message: ${data.message}`);
-      }
-    } catch (err) {
-      console.error("❌ Fetch error:", err);
-      setStatus("❌ Error sending message.");
-    }
+        
+      )
+      .then(
+        () => {
+          setStatus("✅ Message sent successfully!");
+          formRef.current.reset();
+        },
+        (err) => {
+          setStatus("❌ Failed: " + err.text);
+        }
+      );
   };
 
   return (
@@ -54,7 +48,8 @@ export default function Contact() {
         </motion.h2>
 
         <motion.form
-          onSubmit={sendEmail}
+          ref={formRef}
+          onSubmit={handleSubmit} // ✅ fixed here
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
@@ -71,7 +66,7 @@ export default function Contact() {
             <input
               type="text"
               id="name"
-              name="name"
+              name="user_name" // ✅ must match EmailJS template variable
               placeholder="Enter your name"
               className="mt-2 w-full p-3 border-b border-b-gray-300 focus:ring-2 focus:ring-red-300 focus:outline-none rounded-md"
               required
@@ -88,7 +83,7 @@ export default function Contact() {
             <input
               type="email"
               id="email"
-              name="email"
+              name="user_email" // ✅ must match EmailJS template variable
               placeholder="Enter your email"
               className="mt-2 w-full p-3 border-b border-b-gray-300 focus:ring-2 focus:ring-red-300 focus:outline-none rounded-md"
               required
@@ -104,7 +99,7 @@ export default function Contact() {
             </label>
             <textarea
               id="message"
-              name="message"
+              name="message" // ✅ must match EmailJS template variable
               rows="5"
               placeholder="Write your message..."
               className="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none"
@@ -119,7 +114,7 @@ export default function Contact() {
             Send Message
           </button>
 
-          {status && <p className="text-center mt-4">{status}</p>}
+          {status && <p className="text-center mt-4 text-gray-700">{status}</p>}
         </motion.form>
       </div>
     </section>
