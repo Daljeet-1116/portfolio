@@ -11,7 +11,7 @@ export default function Hero() {
     if (confirmDownload) {
      
       const link = document.createElement("a");
-      link.href = "/cv.pdf";
+      link.href = "/images/cv.pdf";
       link.download = "Daljeet_Singh_CV.pdf";
       link.click();
     }
@@ -51,7 +51,7 @@ export default function Hero() {
                 View Projects
               </a>
               <a  onClick={handleDownload}
-                href="#contact"
+                href="cv"
                 className="px-6 sm:px-10 py-3 border-2 border-gray-800 font-semibold rounded-2xl shadow hover:bg-gray-900 hover:text-white transition text-center"
               >
                   Download CV
