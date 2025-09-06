@@ -1,8 +1,7 @@
 "use client";
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser"; // ✅ use this package
-
+import emailjs from "@emailjs/browser"; 
 export default function Contact() {
   const formRef = useRef();
   const [status, setStatus] = useState("");
@@ -22,11 +21,11 @@ export default function Contact() {
       )
       .then(
         () => {
-          setStatus("✅ Message sent successfully!");
+          setStatus(" Message sent successfully!");
           formRef.current.reset();
         },
         (err) => {
-          setStatus("❌ Failed: " + err.text);
+          setStatus(" Failed: " + err.text);
         }
       );
   };
@@ -49,7 +48,7 @@ export default function Contact() {
 
         <motion.form
           ref={formRef}
-          onSubmit={handleSubmit} // ✅ fixed here
+          onSubmit={handleSubmit} 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
@@ -66,7 +65,7 @@ export default function Contact() {
             <input
               type="text"
               id="name"
-              name="user_name" // ✅ must match EmailJS template variable
+              name="user_name" 
               placeholder="Enter your name"
               className="mt-2 w-full p-3 border-b border-b-gray-300 focus:ring-2 focus:ring-red-300 focus:outline-none rounded-md"
               required
@@ -83,7 +82,7 @@ export default function Contact() {
             <input
               type="email"
               id="email"
-              name="user_email" // ✅ must match EmailJS template variable
+              name="user_email" 
               placeholder="Enter your email"
               className="mt-2 w-full p-3 border-b border-b-gray-300 focus:ring-2 focus:ring-red-300 focus:outline-none rounded-md"
               required
@@ -99,7 +98,7 @@ export default function Contact() {
             </label>
             <textarea
               id="message"
-              name="message" // ✅ must match EmailJS template variable
+              name="message"
               rows="5"
               placeholder="Write your message..."
               className="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none"
